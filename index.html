@@ -29,7 +29,7 @@
 
   // 3. Load GLB Model
   const loader = new GLTFLoader();
-  loader.load('model.glb', function (gltf) {
+  loader.load('./model.glb', function (gltf) {
     scene.add(gltf.scene);
     gltf.scene.rotation.y = Math.PI; // Rotate if needed
   }, undefined, function (error) {
