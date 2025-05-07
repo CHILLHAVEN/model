@@ -35,9 +35,17 @@
   document.body.appendChild(renderer.domElement);
 
   // Controls
-  const controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.05;
+ const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+
+// Prevent going below the ground
+controls.minPolarAngle = 0;
+controls.maxPolarAngle = Math.PI / 2;
+
+// Prevent zooming in too close or too far
+controls.minDistance = 2;
+controls.maxDistance = 10;
 
   // Light
   const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1.2);
