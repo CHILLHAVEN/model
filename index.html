@@ -53,7 +53,7 @@ controls.maxDistance = 15;
 
   // Load model
   const loader = new GLTFLoader();
-  loader.load('https://www.dropbox.com/scl/fi/fr9fagpngt1c70b19v045/model-v1.glb?rlkey=fa499twpti51e344xphme5wfu&st=uk4ecp9l&dl=0', function (gltf) {
+  loader.load('./model.glb', function (gltf) {
     scene.add(gltf.scene);
     gltf.scene.rotation.y = Math.PI; // optional flip
   }, undefined, function (error) {
