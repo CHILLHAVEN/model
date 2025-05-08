@@ -41,7 +41,8 @@ controls.dampingFactor = 0.05;
 
 
   // Light
-  
+  const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1.2);
+  scene.add(hemiLight);
 
   // Load model
   const loader = new GLTFLoader();
